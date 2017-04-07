@@ -4,6 +4,7 @@
 
 var express = require('express'),
     app = express();
+var port = process.env.PORT || 8080;
 
 app.set('views', 'views');
 app.set('view engine', 'jade');
@@ -13,5 +14,5 @@ app.get('/', function(req, res) {
   });
 });
 //added a commet
-app.listen(8080);
+app.listen(port);
 module.exports.getApp = app;
